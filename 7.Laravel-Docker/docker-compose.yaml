@@ -22,5 +22,7 @@ services:
     build:
       context: ./dockerfile
       dockerfile: composer.dockerfile
+    volumes:
+      -./src:/var/www/html
   # artisan:
   # npm:
