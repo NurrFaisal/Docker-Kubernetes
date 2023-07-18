@@ -17,7 +17,10 @@ spec:
           image: nurfaisal/kub-data-demo
           env:
             - name: STORY_FOLDER
-              value: 'story'
+              valueForm:
+                configMapKeyRef: 
+                  name: data-store-env
+                  key: folder
           volumeMounts:
             - mountPath: /app/story
               name: story-volume
