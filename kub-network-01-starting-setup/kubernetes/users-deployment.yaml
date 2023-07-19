@@ -1,10 +1,10 @@
 apiVersion: apps/v1
-kind: deployment
+kind: Deployment
 metadata:
   name: users-deployment
 spec:
   replicas: 1
-  selector:
+  selector: 
     matchLabels:
       app: users
   template:
@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
         - name: users
-          image: nurfaisal/kub-demo-users
+          image: nurfaisal/kub-demo-users         
